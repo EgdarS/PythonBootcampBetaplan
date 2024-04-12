@@ -1,0 +1,26 @@
+.container1{
+    border: 1px solid black;
+    margin-top: 50px;
+    margin-left: 100px;
+    margin-bottom: 30px;
+    margin-right: 400px;
+    padding: 30px;
+}
+button{
+    color: black;
+    background-color: orange;
+    box-shadow: 2px 2px 0px 0px;
+    padding: 5px 10px;
+}
+.justify-between{
+    justify-content: space-between;
+}
+.align-center{
+    align-items: center;
+}
+.d-flex{
+    display: flex;
+}
+p{
+    margin-left: 100px;
+}

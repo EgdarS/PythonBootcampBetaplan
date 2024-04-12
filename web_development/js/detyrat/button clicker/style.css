@@ -1,0 +1,78 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+.d-flex{
+    display: flex;
+}
+.justify-between{
+    justify-content: space-between;
+}
+.align-center{
+    align-items: center;
+}
+.navButton{
+    background-color: blue;
+    color: white;
+    box-shadow: 3px 3px black;
+    border: 1px solid black;
+    padding: 5px 20px;
+}
+.nav{
+    margin-top: 5px;
+    margin-bottom: 20px;
+    background-color: lightgray;
+    padding: 20px;
+    width: 100%;    
+}
+.firstContainer{
+    width: 70%;
+    border: 1px solid black;
+    padding: 20px;
+}
+.flex-column{
+    flex-direction: column;
+}
+.secondContainer{
+    width: 30%;
+    padding: 20px;
+    border: 1px solid black;
+    margin-left: 20px;
+    height: fit-content;
+}
+body{
+    width: 80%;
+    width: auto;
+    margin-left: 100px;
+    margin-right: 100px;
+}
+.fcButton{
+    background-color: orange;
+    color: black;
+    box-shadow: 3px 3px black;
+    border: 1px solid black;
+    padding: 5px 20px;
+    margin-top: 20px;
+}
+.scButton{
+    background-color: green;
+    color: black;
+    box-shadow: 3px 3px black;
+    border: 1px solid black;
+    padding: 5px 20px;
+    margin-top: 20px;
+}
+.span{
+    font-size: 100px;
+    color: black;
+}
+.thirdContainer{
+    width: 64.7%;
+    border: 1px solid black;
+    padding: 20px;
+    margin-top: 20px;
+    margin-right: 100px;
+}
+.row2{
+    align-items: last baseline;
+}

@@ -1,0 +1,13 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+.image {
+    position: relative;
+    height: 50px;
+    width: 50px;
+}
+.image .user-circle {
+    height: 100%;
+    width: 100%;
+}

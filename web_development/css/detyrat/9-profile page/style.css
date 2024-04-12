@@ -1,0 +1,134 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+.m-0 {
+    margin: 0px;
+}
+.mx-10 {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.my-10 {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.mx-5 {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+.my-5 {
+    margin-left: 5px;
+    margin-right: 5px;
+}
+.p-0{
+    padding: 0px;
+}
+.px-10{
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.py-10{
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.px-5{
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+.py-5{
+    padding-left: 5px;
+    padding-right: 5px;
+}
+.squareimage{
+    height: 25px;
+    width: 25px;
+    border-radius: 50%;
+    object-fit: contain;
+}
+.border{
+    border-bottom: 1px solid gainsboro;
+    border-left: 1px solid gainsboro;
+    border-right: 1px solid gainsboro;
+    border-top: none;
+}
+.d-flex{
+    display: flex;
+}
+.j-content-center{
+    justify-content: center;
+}
+.j-content-space-around{
+    justify-content: space-around;
+}
+.j-content-space-between{
+    justify-content: space-between;
+}
+.j-content-space-evenly{
+    justify-content: space-evenly;
+}
+.align-items-center{
+    align-items: center;
+}
+.align-items-start{
+    align-items: start;
+}
+.color-white{
+    color: white;
+}
+.color-black{
+    color: black;
+}
+.background-white{
+    background-color: white;
+}
+.background-darkgrey{
+    background-color: darkgrey;
+}
+.background-aqua{
+    background-color: aqua;
+}
+.background-black{
+    background-color: black;
+}
+.main-container{
+    width: 60%;
+}
+.mainimage{
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    border: 1px solid gainsboro;
+    position: relative;
+    top: 50px;
+}
+.main{
+    width: 70%;
+    margin: auto;
+}
+ul {
+    list-style-type: none;
+
+}
+a {
+    margin-right: 20px;
+    text-decoration: none;
+    color: white
+}
+.nav {
+    color: white;
+    background-color: black;
+    padding: 10px 10px;
+    align-items: center;
+    width: 100%;
+}
+.edit-profile{
+    text-decoration: underline;
+    color: blue;
+}
+.active{
+    font-weight: 700;
+}
+.nav-title{
+    font-weight: 200;
+}
