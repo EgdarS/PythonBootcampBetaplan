@@ -19,5 +19,6 @@ class User:
 egi=User('Egdar', 'Shaqiri', 'egi.shaqiri99@gmail.com', pin='1234')
 
 #egi.bankAccount.deposit(input('Enter pin: '), input('How much do you want to deposit? '))
-
-egi.bankAccount.withdraw(input('Enter pin: '), input('How much do you want to withdraw? '))
+#egi.bankAccount.showAmount(input('Enter pin: '))
+#egi.bankAccount.withdraw(input('Enter pin: '), input('How much do you want to withdraw? '))
+egi.bankAccount.interestRate(input('Enter pin:'), input('Enter interest rate:'))

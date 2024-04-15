@@ -30,3 +30,13 @@ class bankAccount:
         else:
             print(f'Insufficient funds. Current balance: ${self.amount}')
             return self  
+        
+    def interestRate(self, pin, interestRate):
+        if self.pin !=pin:
+            print('Incorrect pin! Try again.')
+            return False
+        if self.amount > 0:
+            self.amount=self.amount+(self.amount*int(interestRate))
+        else:
+            print(f'Insufficient funds. Current balance: ${self.amount}')
+            return self
