@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Counter</title>
+</head>
+<body>
+    <h1>View Counter</h1>
+    <p>Number of times this page has been viewed: {{ view_count }}</p>
+    <form action="/click" method="post">
+        <button type="submit">Click</button>
+    </form>
+    <form action="/reset" method="post">
+        <button type="submit">Reset</button>
+    </form>
+</body>
+</html>
