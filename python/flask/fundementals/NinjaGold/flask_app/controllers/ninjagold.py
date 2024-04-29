@@ -25,7 +25,6 @@ def process_money():
             'amount': mywinnings
         }
         session['activities'].append(activity)
-
     elif type == 'cave':
         mywinnings=random.randint(5,10)
         activity={
@@ -33,7 +32,6 @@ def process_money():
             'amount' : mywinnings
         }
         session['activities'].append(activity)
-
     elif type == 'house':
         mywinnings=random.randint(2,5)
         activity={
@@ -41,7 +39,6 @@ def process_money():
             'amount' : mywinnings
         }
         session['activities'].append(activity)
-
     elif type == 'casino':
         mywinnings=random.randint(-50,50)
         if mywinnings >=0:
