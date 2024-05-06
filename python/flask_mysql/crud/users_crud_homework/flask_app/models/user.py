@@ -24,3 +24,21 @@ class User:
             for eachUser in results:
                 users.append(eachUser)
         return users
+    
+    @classmethod
+    def get_user_by_id(cls,data):
+        query = 'SELECT * FROM users where id=%(id)s;'
+        results = connectToMySQL(cls.db_name).query_db(query,data)
+        if results:
+            return results[0]
+        return False
+    
+    @classmethod
+    def user_delete(cls,data):
+        query = 'DELETE FROM users where id=%(id)s;'
+        return connectToMySQL(cls.db_name).query_db(query,data)
+    
+    @classmethod
+    def update_user(cls,data):
+        query='UPDATE users set username= %(username)s, email = %(email)s WHERE id = %(id)s'
+        return connectToMySQL(cls.db_name).query_db(query,data)
