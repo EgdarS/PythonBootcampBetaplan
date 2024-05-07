@@ -41,9 +41,10 @@ def editProfile(id):
     user=User.get_user_by_id(data)
     return render_template('editUser.html', user=user)
 
-@app.route('/update/user/<int:id>')
+@app.route('/update/user/<int:id>', methods=['POST'])
 def update(id):
     data = {
+        'id': request.form['id'],
         'username': request.form['username'],
         'email' : request.form['email'],
         'password': request.form['password']
