@@ -39,6 +39,6 @@ class User:
         return connectToMySQL(cls.db_name).query_db(query,data)
     
     @classmethod
-    def update_user(cls,data):
+    def user_update(cls,data):
         query='UPDATE users set username= %(username)s, email = %(email)s WHERE id = %(id)s'
         return connectToMySQL(cls.db_name).query_db(query,data)

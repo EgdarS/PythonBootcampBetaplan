@@ -30,7 +30,7 @@ def profile(id):
     data={
         'id':id
     }
-    user=User.user_delete(data)
+    user=User.get_user_by_id(data)
     return render_template('profile.html', user=user)
 
 @app.route('/edit/user/<int:id>')
@@ -38,15 +38,25 @@ def editProfile(id):
     data={
         'id':id
     }
-    user=User.update_user(data)
+    user=User.get_user_by_id(data)
     return render_template('editUser.html', user=user)
+
+@app.route('/update/user/<int:id>')
+def update(id):
+    data = {
+        'username': request.form['username'],
+        'email' : request.form['email'],
+        'password': request.form['password']
+    }
+    user=User.user_update(data)
+    return redirect('/dashboard',user = user)
 
 @app.route('/delete/<int:id>')
 def delete(id):
     data={
         'id':id
     }
-    User.user_delete(data)
+    user=User.user_delete(data)
     return redirect('/dashboard')
     #return redirect (request.referrer)  (reload tek e njejta faqe ne vend te redirect dashboard)
 
