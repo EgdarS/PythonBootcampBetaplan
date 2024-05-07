@@ -46,7 +46,7 @@ def delete(id):
     data={
         'id':id
     }
-    user=User.user_delete(data)
+    User.user_delete(data)
     return redirect('/dashboard')
     #return redirect (request.referrer)  (reload tek e njejta faqe ne vend te redirect dashboard)
 
