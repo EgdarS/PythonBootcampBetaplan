@@ -30,7 +30,7 @@ def profile(id):
     data={
         'id':id
     }
-    user=User.get_user_by_id(data)
+    user=User.user_delete(data)
     return render_template('profile.html', user=user)
 
 @app.route('/edit/user/<int:id>')
@@ -38,7 +38,7 @@ def editProfile(id):
     data={
         'id':id
     }
-    user=User.get_user_by_id(data)
+    user=User.update_user(data)
     return render_template('editUser.html', user=user)
 
 @app.route('/delete/<int:id>')
