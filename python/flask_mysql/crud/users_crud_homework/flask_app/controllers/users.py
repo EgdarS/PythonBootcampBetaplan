@@ -44,13 +44,12 @@ def editProfile(id):
 @app.route('/update/user/<int:id>', methods=['POST'])
 def update(id):
     data = {
-        'id': request.form['id'],
+        'id':id,
         'username': request.form['username'],
-        'email' : request.form['email'],
-        'password': request.form['password']
+        'email' : request.form['email']
     }
-    user=User.user_update(data)
-    return redirect('/dashboard',user = user)
+    User.user_update(data)
+    return redirect('/dashboard')
 
 @app.route('/delete/<int:id>')
 def delete(id):
@@ -68,8 +67,8 @@ def updateuser(id):
         'username': request.form['username'],
         'email': request.form['email']
     }
-    User.update_user(data)
-    return redirect('/profile/'+ int(id))
+    User.user_update(data)
+    return redirect('/profile/'+ str(id))
     # return redirect ('/dashboard')
 
 
