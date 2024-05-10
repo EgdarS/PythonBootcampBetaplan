@@ -1,4 +1,5 @@
 from flask_app.config.mysqlconnection import connectToMySQL
+from flask import flash
 
 class User:
     db_name = 'users_crud'
@@ -42,3 +43,4 @@ class User:
     def user_update(cls,data):
         query='UPDATE users set username= %(username)s, email = %(email)s WHERE id = %(id)s'
         return connectToMySQL(cls.db_name).query_db(query,data)
+    

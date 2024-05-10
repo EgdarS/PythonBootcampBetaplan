@@ -2,6 +2,7 @@ from flask_app import app
 from flask import render_template, redirect, session, request
 from flask_app.models.user import User
 
+
 @app.route('/')
 def controller():
     return redirect('/register')
@@ -49,27 +50,27 @@ def update(id):
         'email' : request.form['email']
     }
     User.user_update(data)
-    return redirect('/dashboard')
+    return redirect('/profile/'+ str(id))
 
 @app.route('/delete/<int:id>')
 def delete(id):
     data={
         'id':id
     }
-    user=User.user_delete(data)
+    User.user_delete(data)
     return redirect('/dashboard')
     #return redirect (request.referrer)  (reload tek e njejta faqe ne vend te redirect dashboard)
 
-@app.route('/update/user/<int:id>', methods=['POST'])
-def updateuser(id):
-    data={
-        'id': id,
-        'username': request.form['username'],
-        'email': request.form['email']
-    }
-    User.user_update(data)
-    return redirect('/profile/'+ str(id))
-    # return redirect ('/dashboard')
+# @app.route('/update/user/<int:id>', methods=['POST'])
+# def updateuser(id):
+#     data={
+#         'id': id,
+#         'username': request.form['username'],
+#         'email': request.form['email']
+#     }
+#     User.user_update(data)
+#     return redirect('/profile/'+ str(id))
+#     # return redirect ('/dashboard')
 
 
 @app.route('/logout')
