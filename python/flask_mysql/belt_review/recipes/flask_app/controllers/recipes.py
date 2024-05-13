@@ -70,7 +70,9 @@ def editRecipe(id):
     }
     recipe=Recipe.get_recipe_by_id(data)
     loggedUser=User.get_user_by_id(data)
-    return render_template('edit.html', recipe=recipe, loggedUser=loggedUser)
+    if loggedUser['id']==recipe['user_id']:
+        return render_template('edit.html', recipe=recipe, loggedUser=loggedUser)
+    return redirect('/')
 
 @app.route('/update/recipe/<int:id>', methods=['POST'])
 def updateRecipe(id):
@@ -85,7 +87,10 @@ def updateRecipe(id):
         'date':request.form['date'],
         'under':request.form['under']       
     }
-    Recipe.update_recipe(data)
+    recipe=Recipe.get_recipe_by_id(data)
+    loggedUser=User.get_user_by_id(data)
+    if loggedUser['id']==recipe['user_id']:
+        Recipe.update_recipe(data)
     return redirect('/')
 
 
